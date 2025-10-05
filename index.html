@@ -1,355 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Resume - Mike Obin</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 20px;
-        }
-        .resume-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        header .subtitle {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-        header .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            font-size: 0.95em;
-        }
-        header .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        main {
-            padding: 40px;
-        }
-        section {
-            margin-bottom: 35px;
-        }
-        section h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-        }
-        .summary {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 4px solid #667eea;
-        }
-        .experience-item,
-        .education-item,
-        .project-item {
-            margin-bottom: 25px;
-        }
-        .experience-item h3,
-        .education-item h3,
-        .project-item h3 {
-            color: #764ba2;
-            font-size: 1.3em;
-            margin-bottom: 5px;
-        }
-        .experience-item .position,
-        .education-item .degree {
-            font-weight: 600;
-            color: #555;
-            margin-bottom: 5px;
-        }
-        .experience-item .date,
-        .education-item .date {
-            color: #888;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-        .experience-item ul,
-        .project-item ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
-        .experience-item li,
-        .project-item li {
-            margin-bottom: 8px;
-        }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .skill-category {
-            background: #f0f4ff;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 3px solid #764ba2;
-        }
-        .skill-category h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        .skill-category ul {
-            list-style: none;
-        }
-        .skill-category li {
-            padding: 5px 0;
-            color: #555;
-        }
-        .skill-category li:before {
-            content: "• ";
-            color: #764ba2;
-            font-weight: bold;
-        }
-        footer {
-            background: #f8f9fa;
-            padding: 20px;
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-            main {
-                padding: 20px;
-            }
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Resume - Mike Obin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0f0f12; --text:#e6e6f0; --muted:#a9a9c0; --cyan:#00e5ff; --magenta:#ff2bd6; --purple:#8a2be2; --neon:#6df3ff; --grid:rgba(255,255,255,0.04); --card-glow:0 0 24px rgba(0,229,255,0.2), 0 0 48px rgba(138,43,226,0.15);} 
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:'Montserrat','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;color:var(--text);background:
+      radial-gradient(1200px 800px at 85% -10%, rgba(255,43,214,0.15), transparent 60%),
+      radial-gradient(1000px 700px at -10% 20%, rgba(0,229,255,0.14), transparent 55%),
+      linear-gradient(180deg, #0c0c10 0%, #121216 100%);
+      background-color:#121212;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(ellipse at 50% 10%, black 40%, transparent 80%)}
+    .resume-container{position:relative;max-width:1000px;margin:64px auto;background:linear-gradient(180deg, rgba(20,20,28,0.9), rgba(18,18,24,0.9));border-radius:16px;border:1px solid rgba(255,255,255,0.08);box-shadow:var(--card-glow);overflow:hidden;z-index:1}
+    .resume-container::before{content:"";position:absolute;inset:-2px;background:linear-gradient(135deg,var(--cyan),var(--purple),var(--magenta));filter:blur(16px) saturate(140%);opacity:.25;z-index:-1}
+    header{background:linear-gradient(135deg, rgba(0,229,255,0.08), rgba(138,43,226,0.08) 40%, rgba(255,43,214,0.08));padding:56px 32px 40px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.08)}
+    header h1{font-family:'Orbitron',sans-serif;font-weight:700;font-size:2.4rem;letter-spacing:.06em;text-transform:uppercase;text-shadow:0 0 10px rgba(109,243,255,.3),0 0 20px rgba(138,43,226,.2)}
+    header .subtitle{margin-top:10px;color:var(--neon);font-family:'Roboto Mono',monospace;font-size:1rem;letter-spacing:.03em;opacity:.95}
+    header .contact-info{margin-top:18px;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;color:var(--muted);font-family:'Roboto Mono',monospace}
+    main{padding:36px 32px 44px}
+    section{margin-bottom:32px;position:relative}
+    section::before{content:"";position:absolute;left:0;right:0;top:-10px;height:2px;background:linear-gradient(90deg, transparent, var(--cyan), var(--purple), var(--magenta), transparent);filter:drop-shadow(0 0 6px rgba(0,229,255,.6));opacity:.6;animation:scan 6s linear infinite;background-size:300% 100%}
+    @keyframes scan{0%{background-position:0 0}100%{background-position:300% 0}}
+    section h2{font-family:'Orbitron',sans-serif;font-size:1.2rem;letter-spacing:.2em;color:var(--text);margin-bottom:14px;display:inline-block;padding:8px 12px;border:1px solid rgba(255,255,255,0.12);border-radius:10px;box-shadow:0 0 0 1px rgba(255,255,255,0.04) inset,0 0 18px rgba(0,229,255,0.12);transition:transform .2s ease,box-shadow .2s ease,color .2s ease}
+    section h2:hover{transform:translateY(-1px);color:var(--neon);box-shadow:0 0 0 1px rgba(0,229,255,.35) inset,0 0 18px rgba(255,43,214,.28),0 0 36px rgba(138,43,226,.22)}
+    .summary{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 10px 30px rgba(0,0,0,0.35) inset}
+    .experience-item,.education-item,.project-item{margin-bottom:22px}
+    .experience-item h3,.education-item h3,.project-item h3{font-family:'Montserrat',sans-serif;color:#eaeaff;font-size:1.1rem;text-shadow:0 0 8px rgba(0,229,255,.25)}
+    .position,.degree{font-weight:600;color:var(--neon);font-family:'Roboto Mono',monospace}
+    .date{color:var(--muted);font-size:.92rem;margin:2px 0 8px}
+    .experience-item ul,.project-item ul{margin:10px 0 0 18px}
+    .experience-item li,.project-item li{margin-bottom:8px}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:14px}
+    .skill-category{background:linear-gradient(180deg, rgba(18,18,24,0.9), rgba(24,24,30,0.8));border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:14px 14px 12px;box-shadow:0 2px 16px rgba(0,0,0,0.45),0 0 24px rgba(0,229,255,0.06);transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+    .skill-category:hover{transform:translateY(-3px);border-color:rgba(0,229,255,.35);box-shadow:0 8px 28px rgba(0,0,0,0.6),0 0 28px rgba(255,43,214,0.18)}
+    .skill-category h4{font-family:'Orbitron',sans-serif;color:var(--text);letter-spacing:.08em;margin-bottom:8px;font-size:.95rem}
+    .skill-category ul{list-style:none}
+    .skill-category li{padding:4px 0;color:var(--muted);font-family:'Roboto Mono',monospace}
+    .skill-category li::before{content:"▹";color:var(--cyan);margin-right:8px;text-shadow:0 0 6px rgba(0,229,255,.8)}
+    a{color:var(--cyan);text-decoration:none;transition:color .16s ease,text-shadow .16s ease}
+    a:hover{color:var(--magenta);text-shadow:0 0 8px rgba(255,43,214,.6),0 0 18px rgba(0,229,255,.45)}
+    footer{padding:18px;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid rgba(255,255,255,0.08);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    @media (max-width:768px){header h1{font-size:1.9rem}main{padding:24px 18px 28px}}
+  </style>
 </head>
 <body>
-    <div class="resume-container">
-        <header>
-            <h1>Mike Obin</h1>
-            <div class="subtitle">Software Quality Assurance Engineer | Automation Testing Specialist</div>
-            <div class="contact-info">
-                <span>📧 mikeobinq@gmail.com</span>
-                <span>📍 Cebu City, Central Visayas</span>
-                <span>💼 github.com/mobinque</span>
-            </div>
-        </header>
+  <div class="resume-container">
+    <header>
+      <h1>Mike Obin</h1>
+      <div class="subtitle">Software Quality Assurance Engineer | Automation Testing Specialist</div>
+      <div class="contact-info">
+        <span>📧 mikeobinq@gmail.com</span>
+        <span>📍 Cebu City, Central Visayas</span>
+        <span>💼 <a href="https://github.com/mobinque" target="_blank" rel="noopener">github.com/mobinque</a></span>
+      </div>
+    </header>
 
-        <main>
-            <section class="professional-summary">
-                <h2>Professional Summary</h2>
-                <div class="summary">
-                    <p>
-                        Results-driven Software Quality Assurance Engineer with extensive expertise in automation testing, 
-                        end-to-end test automation pipelines, and continuous integration/continuous delivery (CI/CD) practices. 
-                        Proven experience in building robust automation frameworks using Selenium, Serenity BDD, and Rest Assured, 
-                        integrated with Jenkins pipelines and Docker containerization. Skilled in developing scalable test automation 
-                        solutions that accelerate software delivery while maintaining high quality standards. Passionate about 
-                        implementing best practices in test automation and driving quality excellence throughout the software development lifecycle.
-                    </p>
-                </div>
-            </section>
+    <main>
+      <section class="professional-summary">
+        <h2>Professional Summary</h2>
+        <div class="summary">
+          <p>
+            Results-driven Software Quality Assurance Engineer with extensive expertise in automation testing, end-to-end test automation pipelines, and continuous integration/continuous delivery (CI/CD) practices. Proven experience in building robust automation frameworks using Selenium, Serenity BDD, and Rest Assured, integrated with Jenkins pipelines and Docker containerization. Skilled in developing scalable test automation solutions that accelerate software delivery while maintaining high quality standards. Passionate about implementing best practices in test automation and driving quality excellence throughout the software development lifecycle.
+          </p>
+        </div>
+      </section>
 
-            <section class="work-experience">
-                <h2>Work Experience</h2>
-                
-                <article class="experience-item">
-                    <h3>Senior QA Automation Engineer</h3>
-                    <div class="position">Tech Solutions Inc.</div>
-                    <div class="date">2021 - Present | Cebu City, Central Visayas</div>
-                    <ul>
-                        <li>Led development of comprehensive E2E automation pipeline using Serenity BDD, Selenium WebDriver, and Rest Assured</li>
-                        <li>Implemented CI/CD integration with Jenkins Blue Ocean pipelines, reducing test execution time by 60%</li>
-                        <li>Designed and developed performance testing framework using Taurus and JMeter for load testing critical applications</li>
-                        <li>Mentored team of 5 QA engineers on automation best practices and framework architecture</li>
-                        <li>Achieved 85% test automation coverage across web and API testing suites</li>
-                    </ul>
-                </article>
+      <section class="work-experience">
+        <h2>Work Experience</h2>
+        <article class="experience-item">
+          <h3>Senior QA Automation Engineer</h3>
+          <div class="position">Tech Solutions Inc.</div>
+          <div class="date">2021 - Present | Cebu City, Central Visayas</div>
+          <ul>
+            <li>Led development of comprehensive E2E automation pipeline using Serenity BDD, Selenium WebDriver, and Rest Assured</li>
+            <li>Implemented CI/CD integration with Jenkins Blue Ocean pipelines, reducing test execution time by 60%</li>
+            <li>Designed and developed performance testing framework using Taurus and JMeter for load testing critical applications</li>
+            <li>Mentored team of 5 QA engineers on automation best practices and framework architecture</li>
+            <li>Achieved 85% test automation coverage across web and API testing suites</li>
+          </ul>
+        </article>
+        <article class="experience-item">
+          <h3>QA Automation Engineer</h3>
+          <div class="position">Digital Innovations Corp</div>
+          <div class="date">2018 - 2021 | Cebu City, Central Visayas</div>
+          <ul>
+            <li>Developed and maintained automated test suites for web applications using Selenium and Java</li>
+            <li>Implemented API testing framework with Rest Assured, achieving 95% API endpoint coverage</li>
+            <li>Integrated test automation with Docker containers for consistent test environment management</li>
+            <li>Collaborated with development teams to establish quality gates and testing standards</li>
+            <li>Reduced regression testing time from 3 days to 4 hours through automation initiatives</li>
+          </ul>
+        </article>
+        <article class="experience-item">
+          <h3>Software QA Engineer</h3>
+          <div class="position">Software Systems Ltd.</div>
+          <div class="date">2015 - 2018 | Cebu City, Central Visayas</div>
+          <ul>
+            <li>Performed manual and automated testing for enterprise web applications</li>
+            <li>Created and executed comprehensive test plans, test cases, and test scripts</li>
+            <li>Participated in Agile/Scrum ceremonies and sprint planning activities</li>
+            <li>Identified and documented defects using JIRA, ensuring timely resolution</li>
+            <li>Contributed to continuous improvement of QA processes and methodologies</li>
+          </ul>
+        </article>
+      </section>
 
-                <article class="experience-item">
-                    <h3>QA Automation Engineer</h3>
-                    <div class="position">Digital Innovations Corp</div>
-                    <div class="date">2018 - 2021 | Cebu City, Central Visayas</div>
-                    <ul>
-                        <li>Developed and maintained automated test suites for web applications using Selenium and Java</li>
-                        <li>Implemented API testing framework with Rest Assured, achieving 95% API endpoint coverage</li>
-                        <li>Integrated test automation with Docker containers for consistent test environment management</li>
-                        <li>Collaborated with development teams to establish quality gates and testing standards</li>
-                        <li>Reduced regression testing time from 3 days to 4 hours through automation initiatives</li>
-                    </ul>
-                </article>
+      <section class="education">
+        <h2>Education</h2>
+        <article class="education-item">
+          <h3>University of San Carlos</h3>
+          <div class="degree">Bachelor of Science in Computer Science</div>
+          <div class="date">Graduated: 2015 | Cebu City, Philippines</div>
+          <p>Relevant Coursework: Software Engineering, Software Testing &amp; QA, Database Systems, Web Development</p>
+        </article>
+        <article class="education-item">
+          <h3>Professional Certifications</h3>
+          <div class="degree">ISTQB Certified Tester - Foundation Level</div>
+          <div class="date">2019 | International Software Testing Qualifications Board</div>
+        </article>
+      </section>
 
-                <article class="experience-item">
-                    <h3>Software QA Engineer</h3>
-                    <div class="position">Software Systems Ltd.</div>
-                    <div class="date">2015 - 2018 | Cebu City, Central Visayas</div>
-                    <ul>
-                        <li>Performed manual and automated testing for enterprise web applications</li>
-                        <li>Created and executed comprehensive test plans, test cases, and test scripts</li>
-                        <li>Participated in Agile/Scrum ceremonies and sprint planning activities</li>
-                        <li>Identified and documented defects using JIRA, ensuring timely resolution</li>
-                        <li>Contributed to continuous improvement of QA processes and methodologies</li>
-                    </ul>
-                </article>
-            </section>
+      <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Automation Testing</h4>
+            <ul>
+              <li>Selenium WebDriver</li>
+              <li>Serenity BDD</li>
+              <li>Rest Assured</li>
+              <li>Cucumber/Gherkin</li>
+              <li>TestNG &amp; JUnit</li>
+              <li>Taurus</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Programming Languages</h4>
+            <ul>
+              <li>Java</li>
+              <li>Groovy</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>CI/CD &amp; DevOps</h4>
+            <ul>
+              <li>Jenkins</li>
+              <li>Jenkins Pipelines</li>
+              <li>Docker</li>
+              <li>Git &amp; GitHub</li>
+              <li>Maven</li>
+              <li>Gradle</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Testing Tools</h4>
+            <ul>
+              <li>JMeter</li>
+              <li>Postman</li>
+              <li>JIRA</li>
+              <li>Confluence</li>
+              <li>SoapUI</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Methodologies</h4>
+            <ul>
+              <li>Agile/Scrum</li>
+              <li>Test-Driven Development</li>
+              <li>Behavior-Driven Development</li>
+              <li>Continuous Integration</li>
+              <li>Continuous Delivery</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Professional Skills</h4>
+            <ul>
+              <li>Test Strategy Planning</li>
+              <li>Framework Architecture</li>
+              <li>Technical Leadership</li>
+              <li>Problem Solving</li>
+              <li>Team Collaboration</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-            <section class="education">
-                <h2>Education</h2>
-                
-                <article class="education-item">
-                    <h3>University of San Carlos</h3>
-                    <div class="degree">Bachelor of Science in Computer Science</div>
-                    <div class="date">Graduated: 2015 | Cebu City, Philippines</div>
-                    <p>Relevant Coursework: Software Engineering, Software Testing & QA, Database Systems, Web Development</p>
-                </article>
-
-                <article class="education-item">
-                    <h3>Professional Certifications</h3>
-                    <div class="degree">ISTQB Certified Tester - Foundation Level</div>
-                    <div class="date">2019 | International Software Testing Qualifications Board</div>
-                </article>
-            </section>
-
-            <section class="skills">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Automation Testing</h4>
-                        <ul>
-                            <li>Selenium WebDriver</li>
-                            <li>Serenity BDD</li>
-                            <li>Rest Assured</li>
-                            <li>Cucumber/Gherkin</li>
-                            <li>TestNG & JUnit</li>
-                            <li>Taurus</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Programming Languages</h4>
-                        <ul>
-                            <li>Java</li>
-                            <li>Groovy</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                            <li>SQL</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>CI/CD & DevOps</h4>
-                        <ul>
-                            <li>Jenkins</li>
-                            <li>Jenkins Pipelines</li>
-                            <li>Docker</li>
-                            <li>Git & GitHub</li>
-                            <li>Maven</li>
-                            <li>Gradle</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Testing Tools</h4>
-                        <ul>
-                            <li>JMeter</li>
-                            <li>Postman</li>
-                            <li>JIRA</li>
-                            <li>Confluence</li>
-                            <li>SoapUI</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Methodologies</h4>
-                        <ul>
-                            <li>Agile/Scrum</li>
-                            <li>Test-Driven Development</li>
-                            <li>Behavior-Driven Development</li>
-                            <li>Continuous Integration</li>
-                            <li>Continuous Delivery</li>
-                        </ul>
-                    </div>
-
-                    <div class="skill-category">
-                        <h4>Professional Skills</h4>
-                        <ul>
-                            <li>Test Strategy Planning</li>
-                            <li>Framework Architecture</li>
-                            <li>Technical Leadership</li>
-                            <li>Problem Solving</li>
-                            <li>Team Collaboration</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section class="projects">
-                <h2>Notable Projects</h2>
-                
-                <article class="project-item">
-                    <h3>E2E Automation Pipeline</h3>
-                    <div class="date">2017 - Present</div>
-                    <p>Comprehensive end-to-end automation framework featuring Serenity BDD for behavior-driven testing, 
-                    Selenium for UI automation, Rest Assured for API testing, integrated with Jenkins Blue Ocean pipelines 
-                    and Docker containerization for scalable, maintainable test execution.</p>
-                    <ul>
-                        <li>Utilized Serenity BDD with Selenium and Rest Assured to create hybrid test automation framework</li>
-                        <li>Implemented Jenkins declarative pipelines with Blue Ocean for enhanced CI/CD visualization</li>
-                        <li>Integrated Taurus for performance testing and load testing capabilities</li>
-                        <li>Result: Achieved 70% reduction in test execution time and 90% increase in test coverage</li>
-                    </ul>
-                </article>
-
-                <article class="project-item">
-                    <h3>API Test Automation Suite</h3>
-                    <div class="date">2019 - 2020</div>
-                    <p>Built comprehensive REST API testing framework using Rest Assured and Java, with extensive validation 
-                    of request/response schemas, authentication mechanisms, and business logic.</p>
-                    <ul>
-                        <li>Designed reusable API testing components with Rest Assured framework</li>
-                        <li>Implemented data-driven testing approach for multiple test scenarios</li>
-                        <li>Integrated with CI/CD pipeline for automated API regression testing</li>
-                        <li>Result: Identified 45% more defects in early development stages, saving significant remediation costs</li>
-                    </ul>
-                </article>
-            </section>
-        </main>
-
-        <footer>
-            <p>© 2025 Mike Obin. All rights reserved. | Last Updated: October 2025</p>
-            <p>This resume is hosted on GitHub Pages. Feel free to reach out via the contact information above.</p>
-        </footer>
-    </div>
-</body>
-</html>
+      <section class="projects">
+        <h2>Notable Projects</h2>
+        <article class="project-item">
+          <h3>E2E Automation Pipeline</h3>
+          <div class="date">2017 - Present</div>
+          <p>Comprehensive end-to-end automation framework featuring Serenity BDD for behavior-driven testing, Selenium for UI automation, Rest Assured for API testing, integrated with Jenkins Blue Ocean pipelines and Docker containerization for scalable, maintainable test execution.</p>
+          <ul>
+            <li>Utilized Serenity BDD with Selenium and Rest Assured to create hybrid test automation framework</li>
+            <li>Implemented Jenkins declarative pipelines with Blue Ocean for enhanced CI/CD visualization</li>
+            <li>Integrated Taurus for performance testing and load testing capabilities</li>
+            <li>Result: Achieved 70% reduction in test execution time and 90% increase in test coverage</
